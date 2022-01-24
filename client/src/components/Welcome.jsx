@@ -4,6 +4,7 @@ import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
 import { Loader } from './';
 import { TransactionContext } from '../context/TransactionContext';
+import { shortenAddress } from '../utils/shortenAddress.js'
 
 
 
@@ -65,7 +66,7 @@ const Welcome = () => {
                 </div>
                 <div>
                   <p className="text-white font-light text-sm" >
-                    Address
+                    {shortenAddress(currentAccount)}
                   </p>
                   <p className="text-white font-semibold text-lg mt-1" >
                     Ethereum
